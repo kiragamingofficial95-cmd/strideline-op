@@ -72,10 +72,13 @@ h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;margin:.4rem 0 .8rem}
 /* Rotating logo belt */
 .logo-belt{display:flex;align-items:center;gap:14px;max-width:1160px;margin:0 auto;padding:10px 20px;overflow:hidden}
 .belt-label{font-size:.72rem;font-weight:800;letter-spacing:.08em;color:var(--mut);white-space:nowrap}
-.belt-viewport{overflow:hidden;flex:1;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.belt-track{display:flex;gap:34px;width:max-content;animation:belt 22s linear infinite}
+.belt-rows{flex:1;display:grid;gap:8px;min-width:0}
+.belt-viewport{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.belt-track{display:flex;gap:34px;width:max-content;animation:belt 26s linear infinite}
+.belt-track.rev{animation:beltrev 30s linear infinite}
 .belt-viewport:hover .belt-track{animation-play-state:paused}
 @keyframes belt{to{transform:translateX(-50%)}}
+@keyframes beltrev{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 .blogo{font-family:Sora,Inter,sans-serif;font-weight:800;font-size:.95rem;color:var(--navy);white-space:nowrap;opacity:.85}
 .b1{color:#0a1a33}.b2{color:#0b7f7b}.b3{color:#123a6d}.b4{color:#5b2a86}.b5{color:#7c2d12}.b6{color:#0b5e5b}
 
