@@ -94,7 +94,14 @@ h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;margin:.4rem 0 .8rem}
 .stats div{background:#101f3a;border:1px solid #26395c;border-radius:14px;padding:16px;text-align:center}
 .stats strong{font-size:1.7rem;color:#fff}.stats span{display:block;color:#9fb0c9;font-size:.85rem}
 .tcard{background:#fff;color:var(--ink);border-radius:14px;padding:20px}
-.tmeta{display:flex;gap:10px;margin-top:12px}.tav{width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800}
+.tstars{color:#e79b00;font-weight:800;display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.plat{display:inline-flex;align-items:center;gap:4px;font-size:.68rem;font-weight:800;padding:3px 9px;border-radius:100px;background:#f1f5f9;color:#334155;letter-spacing:.02em}
+.plat.g i{font-style:normal;background:#fff;border:1px solid #dadce0;color:#4285F4;width:16px;height:16px;border-radius:50%;display:grid;place-items:center;font-size:.7rem;font-weight:900}
+.plat.c{background:#FF3D2E;color:#fff}
+.tmeta{display:flex;gap:10px;margin-top:12px;align-items:center}
+.tmeta img{width:42px;height:42px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.rmeta{display:flex;gap:10px;margin-top:12px;align-items:center}
+.rmeta img{width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0}
 .tmeta span{font-size:.82rem;color:var(--mut)}
 
 /* reviews */
