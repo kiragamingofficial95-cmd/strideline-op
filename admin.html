@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin — Chat Inbox | StrideLine</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="styles.css">
+<style>
+.admin{max-width:1000px;margin:0 auto;padding:28px 20px}
+.alist{display:grid;gap:10px;margin-top:16px}
+.acard{background:#fff;border:1px solid #e3e9f2;border-radius:12px;padding:14px;cursor:pointer}
+.acard:hover{border-color:#0ea5a0}
+.acard small{color:#5b6b84}
+.aview{background:#fff;border:1px solid #e3e9f2;border-radius:12px;padding:18px;margin-top:16px}
+.aview .msg{max-width:90%}
+.arow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.abtn{border:1px solid #e3e9f2;background:#fff;padding:9px 15px;border-radius:10px;font-weight:700;cursor:pointer}
+.abtn.danger{color:#e11d48;border-color:#fecdd3}
+#adminGate{max-width:380px;margin:12vh auto;background:#fff;border-radius:18px;padding:30px;text-align:center;border:1px solid #e3e9f2}
+#adminGate input{width:100%;padding:13px;border-radius:10px;border:1px solid #e3e9f2;margin:12px 0;font-size:16px;text-align:center}
+</style>
+</head>
+<body style="background:#f6f8fb">
+<div id="adminGate">
+  <h2>🔒 Admin</h2>
+  <p style="color:#5b6b84">Ask Varad for the admin password.</p>
+  <input type="password" id="ap" placeholder="Admin password">
+  <button class="btn btn-primary btn-block" id="aGo">Unlock inbox →</button>
+  <p class="micro" id="am" style="color:#8fa3bf;margin-top:10px"></p>
+</div>
+<div class="admin" id="panel" hidden>
+  <p class="kicker">STRIDELINE ADMIN — NOT LINKED ON HOMEPAGE</p>
+  <h1>Chat Inbox <span id="count"></span></h1>
+  <p style="color:#5b6b84;font-size:.88rem">Shows chats saved in <strong>this browser</strong> (localStorage). For all-devices inbox, connect a backend next.</p>
+  <div class="arow">
+    <button class="abtn" id="exp">⬇ Export JSON</button>
+    <button class="abtn danger" id="wipe">🗑 Delete all</button>
+    <a class="abtn" href="/" style="text-decoration:none">← Site</a>
+  </div>
+  <div class="alist" id="list"></div>
+  <div class="aview" id="view" hidden></div>
+</div>
+<script>
+(function(){
+  var PASS = 'strideABC';
+  if (sessionStorage.getItem('admin_ok') === '1') show();
+  document.getElementById('aGo').onclick = function(){
+    if (document.getElementById('ap').value === PASS) { sessionStorage.setItem('admin_ok','1'); show(); }
+    else document.getElementById('am').textContent = '✕ Wrong password — ask Varad.';
+  };
+  function all(){ try { return JSON.parse(localStorage.getItem('op_chats') || '[]'); } catch(e){ return []; } }
+  function show(){
+    document.getElementById('adminGate').hidden = true;
+    document.getElementById('panel').hidden = false;
+    render();
+  }
+  function render(){
+    var chats = all();
+    document.getElementById('count').textContent = '(' + chats.length + ')';
+    var list = document.getElementById('list'); list.innerHTML = '';
+    if (!chats.length) list.innerHTML = '<p style="color:#5b6b84">No chats yet — open the homepage chat bubble and send a message.</p>';
+    chats.forEach(function(c){
+      var d = document.createElement('div'); d.className = 'acard';
+      var first = (c.messages.find(function(m){return m.from==='user';}) || {}).text || '—';
+      var lead = [c.lead && c.lead.name, c.lead && c.lead.clinic, c.lead && c.lead.contact].filter(Boolean).join(' • ');
+      d.innerHTML = '<strong>' + (c.lead && c.lead.name ? c.lead.name : 'Visitor') + '</strong> <small>' + new Date(c.started).toLocaleString() + ' • ' + c.messages.length + ' msgs</small><br><small>' + first.slice(0,90) + '</small>' + (lead ? '<br><small><strong>Lead:</strong> ' + lead + '</small>' : '');
+      d.onclick = function(){ view(c.id); };
+      list.appendChild(d);
+    });
+  }
+  function view(id){
+    var c = all().find(function(x){return x.id===id;}); if(!c) return;
+    var v = document.getElementById('view'); v.hidden = false;
+    v.innerHTML = '<h3>Transcript — ' + (c.lead && c.lead.name || 'Visitor') + '</h3>' +
+      c.messages.map(function(m){ return '<div class="msg ' + m.from + '">' + m.text.replace(/</g,'&lt;') + '</div>'; }).join('') +
+      '<div class="arow"><button class="abtn danger" id="del">Delete this chat</button></div>';
+    v.scrollIntoView({behavior:'smooth'});
+    document.getElementById('del').onclick = function(){
+      localStorage.setItem('op_chats', JSON.stringify(all().filter(function(x){return x.id!==id;})));
+      v.hidden = true; render();
+    };
+  }
+  document.getElementById('exp').onclick = function(){
+    var b = new Blob([localStorage.getItem('op_chats') || '[]'], {type:'application/json'});
+    var a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = 'chats.json'; a.click();
+  };
+  document.getElementById('wipe').onclick = function(){
+    if (confirm('Delete ALL chats in this browser?')) { localStorage.removeItem('op_chats'); document.getElementById('view').hidden = true; render(); }
+  };
+})();
+</script>
+</body>
+</html>
