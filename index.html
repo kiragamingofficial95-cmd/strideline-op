@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>StrideLine — Websites for Orthotics & Prosthetics Clinics That Book More Evaluations</title>
+<meta name="description" content="StrideLine builds high-converting websites exclusively for Orthotics & Prosthetics clinics. More physician referrals, more private-pay patients, more booked evaluations." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Private password gate -->
+<div class="gate-overlay" id="gate">
+  <div class="gate-box">
+    <div class="logo-mark" style="margin:0 auto 10px">S</div>
+    <h2>Private Preview</h2>
+    <p>Ask <strong>Varad</strong> for the password to view this site.</p>
+    <form id="gateForm">
+      <input type="password" id="gatePass" placeholder="Enter password" autocomplete="off" />
+      <button class="btn btn-accent btn-block" type="submit">Unlock Site →</button>
+    </form>
+    <p class="micro" id="gateMsg" style="color:#8fa3bf!important;text-align:center;margin-top:10px">Protected draft — not public yet.</p>
+  </div>
+</div>
+
+<!-- STICKY TRUST BAR -->
+<div class="topbar">Exclusively for O&P Clinics &nbsp;•&nbsp; ★ 5.0 from 40+ owners &nbsp;•&nbsp; 100% Money-Back Guarantee</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#top" class="logo">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">StrideLine<small>Web for O&P Clinics</small></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#work">Work</a>
+      <a href="#results">Results</a>
+      <a href="#solution">Why Us</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="header-cta">
+      <a href="#book" class="btn btn-primary btn-sm">Book Free O&P Audit →</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ 1. HERO (Blueprint: 3 reasons + social proof + risk reversal + portfolio feature + personality + strong CTA) ============ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="pill">🦿 NICHE EXCLUSIVE: Orthotics & Prosthetics Only — We Don't Do Anyone Else</div>
+      <h1>We Build O&P Websites That Turn Referrals Into <span class="hl">Booked Evaluations.</span></h1>
+      <p class="sub">Generic agencies don't understand L-codes, prior-auth, or physician referral flow. We do. We build fast, trust-heavy websites for O&P clinics that convert patients, parents, and referring physicians.</p>
+
+      <!-- 3 Impactful Reasons -->
+      <div class="reasons">
+        <div class="reason"><span class="ric">✓</span><div><strong>1. O&P-Only Specialists</strong><span>Prosthetic, orthotic & pedorthic patient journeys built-in — not retrofitted.</span></div></div>
+        <div class="reason"><span class="ric">✓</span><div><strong>2. Referral + Patient Engine</strong><span>Physician referral pages, insurance clarity, click-to-call eval booking.</span></div></div>
+        <div class="reason"><span class="ric">✓</span><div><strong>3. Live in 14 Days, Zero Risk</strong><span>30-day booked-evals guarantee. No 6-month retainer. You own everything.</span></div></div>
+      </div>
+
+      <div class="hero-ctas">
+        <a href="#book" class="btn btn-primary btn-lg">Get My Free O&P Website Audit →</a>
+        <a href="#work" class="btn btn-ghost btn-lg">See O&P Work ↓</a>
+      </div>
+      <p class="risk">🔒 100% Money-Back Guarantee • 100% Satisfaction Guarantee • No long contract • You own everything</p>
+
+      <!-- Social proof -->
+      <div class="proof-row">
+        <div class="stars">★★★★★ <strong>5.0</strong></div>
+        <div class="proof-avatars"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="O&P clinic owner" loading="lazy" /><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Practice manager" loading="lazy" /><img src="https://randomuser.me/api/portraits/men/54.jpg" alt="CPO owner" loading="lazy" /><span class="more">+40</span></div>
+        <p>Trusted by <strong>47 O&P clinics</strong> in 22 states • $12M+ in tracked eval revenue</p>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="audit-box" id="book-mini">
+        <h3>Free O&P Growth Audit <span>(worth $499)</span></h3>
+        <p>We'll teardown your site on video: speed, referral leaks, insurance friction.</p>
+        <form id="auditForm">
+          <input type="text" id="fName" placeholder="Your name" required />
+          <input type="text" id="fClinic" placeholder="Clinic name" required />
+          <input type="url" id="fSite" placeholder="Current website URL" required />
+          <button type="submit" class="btn btn-primary btn-block">Claim My Free Audit →</button>
+        </form>
+        <p class="micro" id="formMsg">⚡ 2-min, frictionless. No pitch deck. Replies in 24h.</p>
+        <!-- Personality mini-feature -->
+        <div class="founder-mini">
+          <div class="favatar">VA</div>
+          <div><strong>Varad Agarwal — Founder, StrideLine</strong><span>Ex-O&P front office. I've booked 3,000+ evals myself.</span></div>
+        </div>
+        <!-- Portfolio mini-feature -->
+        <div class="mini-sites">
+          <div class="mini-site"><i></i><span>limbwise.com<br><b>+212% evals</b></span></div>
+          <div class="mini-site"><i></i><span>gaitright-op.com<br><b>3.1x referrals</b></span></div>
+        </div>
+      </div>
+      <!-- Association strip -->
+      <div class="assoc">Works with workflows for: <strong>AOPA • ABC • BOC • Össur • Ottobock • Hanger-type networks</strong></div>
+    </div>
+  </div>
+  <div class="logo-belt">
+    <span class="belt-label">FEATURED O&P CLIENT WORK:</span>
+    <div class="belt-viewport">
+      <div class="belt-track">
+        <span class="blogo b1">🦿 LimbWise</span><span class="blogo b2">▲ GaitRight</span><span class="blogo b3">◉ NextStep</span><span class="blogo b4">♥ Little Strides</span><span class="blogo b5">⚡ ActiveLimb</span><span class="blogo b6">⬢ CranialCare</span>
+        <span class="blogo b1">🦿 LimbWise</span><span class="blogo b2">▲ GaitRight</span><span class="blogo b3">◉ NextStep</span><span class="blogo b4">♥ Little Strides</span><span class="blogo b5">⚡ ActiveLimb</span><span class="blogo b6">⬢ CranialCare</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. PORTFOLIO #1 ============ -->
+<section class="section" id="work">
+  <div class="container">
+    <p class="kicker">PORTFOLIO — SHOW THE WORK</p>
+    <h2>O&P Websites Built to Book, <br/>Not Just to Look Pretty.</h2>
+    <p class="lede">Every build: under 1.5s load, tap-to-call eval button, insurance + referral pages physicians actually send to.</p>
+    <div class="filters">
+      <button class="chip active" data-f="all">All</button>
+      <button class="chip" data-f="prosthetic">Prosthetic</button>
+      <button class="chip" data-f="orthotic">Orthotic</button>
+      <button class="chip" data-f="pediatric">Pediatric</button>
+    </div>
+    <div class="grid3" id="portfolioGrid">
+      <article class="card pf" data-cat="prosthetic">
+        <div class="shot s1"><span>BEFORE → AFTER</span><h4>LimbWise Prosthetics</h4></div>
+        <div class="card-b"><p><b>+212% eval requests</b> in 90 days • AK/BK + osseointegration pages</p><a href="#book">Want this? →</a></div>
+      </article>
+      <article class="card pf" data-cat="orthotic">
+        <div class="shot s2"><span>BEFORE → AFTER</span><h4>GaitRight O&P</h4></div>
+        <div class="card-b"><p><b>3.1x physician referrals</b> • Referral fax → online portal</p><a href="#book">Want this? →</a></div>
+      </article>
+      <article class="card pf" data-cat="pediatric">
+        <div class="shot s3"><span>BEFORE → AFTER</span><h4>Little Strides Pediatric</h4></div>
+        <div class="card-b"><p><b>68% more parent calls</b> • AFO/DAFO parent guides + videos</p><a href="#book">Want this? →</a></div>
+      </article>
+      <article class="card pf" data-cat="orthotic">
+        <div class="shot s4"><span>BEFORE → AFTER</span><h4>NextStep Orthotics</h4></div>
+        <div class="card-b"><p><b>1.9x scoliosis consults</b> • Boston brace education hub</p><a href="#book">Want this? →</a></div>
+      </article>
+      <article class="card pf" data-cat="prosthetic">
+        <div class="shot s5"><span>BEFORE → AFTER</span><h4>ActiveLimb Clinic</h4></div>
+        <div class="card-b"><p><b>54% lower cost/lead</b> • Running blade + athlete stories</p><a href="#book">Want this? →</a></div>
+      </article>
+      <article class="card pf" data-cat="pediatric orthotic">
+        <div class="shot s6"><span>BEFORE → AFTER</span><h4>Cranial Care Center</h4></div>
+        <div class="card-b"><p><b>4.8★ from 310 reviews</b> • Plagiocephaly photo funnel</p><a href="#book">Want this? →</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. TESTIMONIALS / CASE STUDIES (Results Results Results) ============ -->
+<section class="section dark" id="results">
+  <div class="container">
+    <p class="kicker light">SOCIAL PROOF — RESULTS, RESULTS, RESULTS</p>
+    <h2 class="white">O&P Owners Don't Want Traffic.<br/>They Want Booked Evals.</h2>
+    <div class="stats">
+      <div><strong data-count="47">0</strong><span>O&P clinics launched</span></div>
+      <div><strong><span data-count="212">0</span>%</strong><span>Avg. eval lift in 90d</span></div>
+      <div><strong><span data-count="1.4">0</span>s</strong><span>Avg. load time</span></div>
+      <div><strong><span data-count="30">0</span>-day</strong><span>Booked-evals guarantee</span></div>
+    </div>
+    <div class="grid3">
+      <div class="tcard">
+        <p>"We went from 11 to 34 eval requests a month. Referring PTs literally bookmarked our referral page."</p>
+        <div class="tmeta"><span class="tav">AL</span><div><strong>Dr. Aaron Lind, CPO</strong><span>LimbWise Prosthetics, TX — +212% evals</span></div></div>
+      </div>
+      <div class="tcard">
+        <p>"Parents arrive pre-sold. The AFO parent guide filters out 80% of repetitive questions. Front desk breathes again."</p>
+        <div class="tmeta"><span class="tav">MK</span><div><strong>Maria Kessler, Practice Mgr</strong><span>Little Strides Pediatric, FL — 68% more calls</span></div></div>
+      </div>
+      <div class="tcard">
+        <p>"I fired two generic agencies before. These guys speak L-codes and prior-auth. Live in 12 days, referrals tripled."</p>
+        <div class="tmeta"><span class="tav">JR</span><div><strong>James Rowe, Owner</strong><span>GaitRight O&P, OH — 3.1x referrals</span></div></div>
+      </div>
+    </div>
+    <div class="center"><a href="#book" class="btn btn-accent btn-lg">Get Results Like These →</a></div>
+  </div>
+</section>
+
+<!-- ============ 4. REVIEWS ============ -->
+<section class="section" id="reviews">
+  <div class="container">
+    <p class="kicker">REVIEWS & RATINGS</p>
+    <h2>Liked by Clinicians, Loved by Front Desks.</h2>
+    <div class="rev-grid">
+      <div class="rev">★★★★★<p>"Fastest vendor we've ever worked with. Site paid for itself in 3 weeks."</p><small>— Sarah T., Billing, NextStep • Google 5★</small></div>
+      <div class="rev">★★★★★<p>"HIPAA-aware forms + insurance checker cut our no-shows by 31%."</p><small>— CPO D. Patel • Google 5★</small></div>
+      <div class="rev">★★★★★<p>"Physicians complimented our referral portal on week one."</p><small>— Clinic Director, ActiveLimb • Clutch 5★</small></div>
+      <div class="rev">★★★★★<p>"No jargon, weekly Loom updates, owned everything. Rare."</p><small>— Owner, Cranial Care • Google 5★</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. PAIN & SOLUTION (Authority) ============ -->
+<section class="section tint" id="solution">
+  <div class="container">
+    <p class="kicker">AUTHORITY — WE KNOW YOUR PAIN</p>
+    <h2>Your Website Is Leaking Patients.<br/>Here's Exactly How We Fix It.</h2>
+    <div class="pain-grid">
+      <div class="pain">
+        <h4>❌ Pain: "Referrals dry up, no private-pay flow"</h4>
+        <p>Outdated 2014 site, stock photos, no referral page. Physicians stop sending. Patients bounce to Hanger-size competitors.</p>
+        <h4 class="fix">✅ Solution: Referral + Patient Engine</h4>
+        <p>Dedicated physician portal, one-tap fax/e-referral, condition pages (AK, BK, AFO, KAFO, TLSO, cranial) that rank on Google and convert.</p>
+      </div>
+      <div class="pain">
+        <h4>❌ Pain: "Will insurance cover this?" kills calls</h4>
+        <p>Patients confused by L-codes / prior-auth abandon forms. Front desk drowns in repeat questions.</p>
+        <h4 class="fix">✅ Solution: Insurance Clarity System</h4>
+        <p>Coverage checker, Medicare/Medicaid + private payer pages, pre-visit checklist. Fewer phone tags, more qualified evals.</p>
+      </div>
+      <div class="pain">
+        <h4>❌ Pain: "Agencies disappear / hold my site hostage"</h4>
+        <p>Retainers, proprietary builders, 4-month delays, no ownership.</p>
+        <h4 class="fix">✅ Solution: 14-Day Launch + You Own All</h4>
+        <p>Fixed price, live in 14 days, WordPress + fast hosting, analytics dashboard. 30-day booked-evals guarantee or we work free.</p>
+      </div>
+    </div>
+    <div class="process">
+      <div><b>1</b><strong>Audit (Day 0)</strong><span>Video teardown of leaks</span></div>
+      <div><b>2</b><strong>Build (Day 1-10)</strong><span>Copy, design, dev + Loom reviews</span></div>
+      <div><b>3</b><strong>Launch (Day 14)</strong><span>Speed, SEO, referral portal live</span></div>
+      <div><b>4</b><strong>Scale (Day 30+)</strong><span>Reviews engine + Google ranking</span></div>
+    </div>
+    <div class="center"><a href="#book" class="btn btn-primary btn-lg">Fix My Leaks — Free Audit →</a></div>
+  </div>
+</section>
+
+<!-- ============ 6. PERSONALITY (Familiarity + Like, Know & Trust) ============ -->
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div class="about-photo"><span>VA</span><small>Actual human. No stock CEO.</small></div>
+    <div>
+      <p class="kicker">PERSONALITY — KNOW, LIKE & TRUST</p>
+      <h2>Hi, I'm Varad. I Grew Up in an O&P Front Office.</h2>
+      <p>My mom ran intake at a prosthetics clinic. I spent summers scanning insurance cards and calling adjusters about L4360s. I watched great clinicians lose patients to clinics with better websites — not better care.</p>
+      <p>So I niched: <strong>one industry, one outcome — booked evaluations.</strong> No restaurants, no roofers, no SaaS. Just O&P. 47 launches later, our playbook is boringly repeatable: fast site + referral portal + insurance clarity + review engine.</p>
+      <ul class="ticks">
+        <li>✓ Worked O&P front desk 3 yrs — I know prior-auth pain</li>
+        <li>✓ Name, face, cell on every proposal — no account-manager roulette</li>
+        <li>✓ Weekly Looms, plain English, you own everything</li>
+      </ul>
+      <a href="#book" class="btn btn-ghost btn-lg">Talk to Varad Directly →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. PORTFOLIO #2 (Results proof) ============ -->
+<section class="section tint" id="work2">
+  <div class="container">
+    <p class="kicker">MORE PROOF — BEFORE / AFTER</p>
+    <h2>Same Clinic. New Site. Real Numbers.</h2>
+    <div class="ba-grid">
+      <div class="ba"><h4>LimbWise — Old vs New</h4><div class="bars"><div class="bar"><span>Old: 11 evals/mo</span><i style="width:25%"></i></div><div class="bar good"><span>New: 34 evals/mo</span><i style="width:95%"></i></div></div><small>Bounce 71% → 32% • Call clicks 3.4x</small></div>
+      <div class="ba"><h4>GaitRight — Referral Source</h4><div class="bars"><div class="bar"><span>Fax / phone chaos</span><i style="width:30%"></i></div><div class="bar good"><span>Online portal: 62% of referrals</span><i style="width:88%"></i></div></div><small>Referral-to-eval time: 9d → 3d</small></div>
+      <div class="ba"><h4>Little Strides — Parent Calls</h4><div class="bars"><div class="bar"><span>Old: 40 calls/mo</span><i style="width:35%"></i></div><div class="bar good"><span>New: 67 calls/mo, 31% fewer no-shows</span><i style="width:92%"></i></div></div><small>Google "pediatric AFO near me" #1</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. REVIEWS #2 + ASSOCIATIONS ============ -->
+<section class="section" id="trust">
+  <div class="container center">
+    <p class="kicker">RISK REMOVAL + FAMILIAR BRANDS</p>
+    <h2>Zero Risk. Familiar Standards.</h2>
+    <p class="lede">Built to respect AOPA / ABC / BOC patient-education standards. Compatible with Ottobock, Össur, Fillauer product storytelling.</p>
+    <div class="badges"><span>AOPA Member Workflows</span><span>ABC-Aligned Content</span><span>BOC-Friendly</span><span>Össur</span><span>Ottobock</span><span>HIPAA-Aware Forms</span><span>WCAG AA</span></div>
+    <div class="guarantee">
+      <div class="g-head">
+        <h3>🛡️ 100% Money-Back + Satisfaction Guarantee</h3>
+        <div class="seal">100%<small>MONEY-BACK</small></div>
+      </div>
+      <p><strong>Love your new O&P site in 14 days or pay $0.</strong> If you’re not 100% satisfied at preview — before launch — we refund every cent, you keep the mockups.</p>
+      <p><strong>+ 30-Day Booked-Evals Guarantee:</strong> if eval requests don’t rise in 30 days post-launch, we work free until they do. No retainer. You own domain, site, analytics.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. FAQ ============ -->
+<section class="section tint" id="faq">
+  <div class="container narrow">
+    <p class="kicker">FAQ — FRICTIONLESS ANSWERS</p>
+    <h2>Questions O&P Owners Always Ask.</h2>
+    <div class="faq" id="faqList">
+      <details open><summary>How fast can you launch? My site is embarrassing.</summary><p>14 days standard. Copy + design + build + referral portal. Rush 7-day available for single-location clinics with content ready.</p></details>
+      <details><summary>Do you understand insurance / L-codes / physician referrals?</summary><p>Yes — that's why we niched. We build insurance-clarity pages, prior-auth checklists, and physician e-referral portals. Generic agencies skip this; we lead with it.</p></details>
+      <details><summary>Will I rank on Google for "prosthetics near me"?</summary><p>We ship local SEO baked in: Google Business Profile optimization, condition + city pages, review engine, schema. Most clinics hit map-pack in 60-90 days.</p></details>
+      <details><summary>Is it HIPAA compliant?</summary><p>We build HIPAA-aware forms (encrypted, BAA-capable form provider, no PHI in email). Pair with your compliant EHR/intake for full compliance. We'll guide setup.</p></details>
+      <details><summary>What does it cost? Any retainer?</summary><p>Fixed-price builds (most O&P sites $3.5k–$7.5k depending on locations/pages). No forced retainer. Optional care plan for updates/SEO. You own everything.</p></details>
+      <details><summary>What if it doesn't work? Is there a guarantee?</summary><p>Double protection: (1) 100% money-back — not thrilled at preview before launch? Full refund, keep mockups. (2) 30-day booked-evals guarantee — evals don't rise post-launch? We work free until they do. We carry the risk.</p></details>
+      <details><summary>Can you migrate my reviews / photos / content?</summary><p>Yes. We migrate reviews, before/after galleries (with consent), physician lists, and redirect old URLs so you keep SEO.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA (Strong + Frictionless) ============ -->
+<section class="section dark final" id="book">
+  <div class="container final-grid">
+    <div>
+      <h2 class="white">Get Your Free O&P Website Audit.<br/>Know Exactly What's Leaking.</h2>
+      <p>Personalized Loom video in 24h: speed, SEO, referral friction, insurance clarity. Keep it even if we never work together.</p>
+      <ul class="ticks light">
+        <li>✓ 47 O&P sites — we know the pattern in 10 minutes</li>
+        <li>✓ No 45-min sales call to get value</li>
+        <li>✓ Only 4 build slots / month to protect quality</li>
+      </ul>
+      <p class="slots">🔥 2 slots left for this month</p>
+      <p style="margin-top:10px;font-size:.88rem;color:#9fb0c9">🛡️ Covered by 100% Money-Back + Satisfaction Guarantee — love preview or $0.</p>
+    </div>
+    <form class="book-form" id="bookForm">
+      <h3>Claim audit + check availability</h3>
+      <input type="text" id="bName" placeholder="Full name" required />
+      <input type="text" id="bClinic" placeholder="Clinic name" required />
+      <input type="tel" id="bPhone" placeholder="Cell (for Loom link)" required />
+      <input type="url" id="bSite" placeholder="Website URL" required />
+      <button class="btn btn-accent btn-block btn-lg" type="submit">Book My Free Audit →</button>
+      <p class="micro" id="bookMsg">Frictionless: 30 seconds. No card. No contract.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container foot-grid">
+    <div><strong>StrideLine</strong><p>Web design exclusively for Orthotics & Prosthetics clinics.</p></div>
+    <div><a href="#work">Work</a><a href="#results">Results</a><a href="#faq">FAQ</a><a href="#book">Free Audit</a></div>
+    <div><small>© 2026 StrideLine Studio • Built for O&P • AOPA/ABC/BOC workflows respected. Not affiliated with Ottobock/Össur.</small></div>
+  </div>
+</footer>
+
+<!-- Sticky mobile CTA -->
+<a href="#book" class="sticky-cta" data-modal>Book Free O&P Audit →</a>
+
+<!-- Frictionless popup -->
+<div class="modal-overlay" id="auditModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Free O&P audit">
+  <div class="modal" role="document">
+    <button class="modal-x" id="modalClose" aria-label="Close">✕</button>
+    <div id="modalMain">
+      <p class="kicker">FREE — WORTH $499 • 30 SEC</p>
+      <h3>Get My Free O&P Website Audit →</h3>
+      <p class="modal-sub">Video teardown in 24h. Covered by 100% money-back guarantee. <span id="slotNote">2 slots left.</span></p>
+      <form id="modalForm" novalidate>
+        <input type="text" id="mName" placeholder="Full name" autocomplete="name" required />
+        <input type="text" id="mClinic" placeholder="Clinic name" autocomplete="organization" required />
+        <input type="url" id="mSite" placeholder="Website URL (https://...)" inputmode="url" required />
+        <input type="tel" id="mPhone" placeholder="Cell for Loom link" autocomplete="tel" required />
+        <button class="btn btn-accent btn-block btn-lg" type="submit" id="modalSubmit">Claim My Audit →</button>
+        <p class="micro dark-micro" id="modalMsg">⚡ Frictionless • Replies in 24h • You own everything</p>
+      </form>
+    </div>
+    <div id="modalSuccess" hidden>
+      <div class="check">✓</div>
+      <h3>Locked in!</h3>
+      <p>Redirecting to your booking confirmation…</p>
+      <div class="loader"></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
