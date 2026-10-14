@@ -101,7 +101,7 @@ h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;margin:.4rem 0 .8rem}
 .tcard{background:#fff;color:var(--ink);border-radius:14px;padding:20px}
 .tstars{color:#e79b00;font-weight:800;display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
 .plat{display:inline-flex;align-items:center;gap:5px;font-size:.68rem;font-weight:800;padding:3px 9px 3px 5px;border-radius:100px;background:#f1f5f9;color:#334155;letter-spacing:.02em}
-.plat img{width:15px;height:15px;object-fit:contain;flex-shrink:0}
+.plat img{width:16px;height:16px;object-fit:contain;flex-shrink:0;border-radius:4px;background:#fff}
 .plat.c{background:#fff;border:1px solid #ffd9d4}
 .plat.t{background:#fff;border:1px solid #d4e8dc}
 .tmeta{display:flex;gap:10px;margin-top:12px;align-items:center}
