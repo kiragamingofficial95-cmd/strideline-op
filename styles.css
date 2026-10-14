@@ -67,10 +67,24 @@ h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;margin:.4rem 0 .8rem}
 .proof-avatars .more{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;font-size:.65rem;font-weight:800;margin-left:-8px;border:2px solid #fff}
 .proof-row p{font-size:.88rem;color:#41546f}
 
-.audit-box{background:var(--navy);color:#eaf0f8;border-radius:18px;padding:22px;box-shadow:0 20px 50px rgba(10,26,51,.25)}
-.audit-box h3{color:#fff}.audit-box h3 span{color:var(--accent);font-size:.85rem}
-.audit-box p{color:#b9c6da;font-size:.92rem;margin:6px 0 12px}
-.audit-box input{width:100%;padding:12px;border-radius:10px;border:1px solid #2a3d5e;margin-bottom:10px;font-size:.95rem}
+.design-box{background:var(--navy);color:#eaf0f8;border-radius:18px;padding:22px;box-shadow:0 20px 50px rgba(10,26,51,.25)}
+.design-box h3{color:#fff}
+.design-box p{color:#b9c6da;font-size:.92rem;margin:6px 0 12px}
+.design-pill{display:inline-block;background:var(--accent);color:#221a00;font-weight:800;font-size:.72rem;letter-spacing:.06em;padding:7px 12px;border-radius:100px;margin-bottom:10px}
+.design-mockup{background:#fff;border-radius:12px;overflow:hidden;margin:12px 0 14px;color:var(--ink)}
+.mock-bar{display:flex;align-items:center;gap:5px;background:#eef2f7;padding:8px 10px}
+.mock-bar i{width:9px;height:9px;border-radius:50%;background:#c3cede}
+.mock-bar i:first-child{background:#f87171}.mock-bar i:nth-child(2){background:#fbbf24}.mock-bar i:nth-child(3){background:#34d399}
+.mock-bar span{font-size:.68rem;font-weight:700;color:#5b6b84;margin-left:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mock-screen{padding:12px;position:relative;background:linear-gradient(135deg,#0ea5a0,#0a1a33)}
+.mock-nav{height:10px;border-radius:6px;background:rgba(255,255,255,.75);margin-bottom:10px}
+.mock-hero b{display:block;height:16px;width:75%;border-radius:6px;background:#fff;margin-bottom:8px}
+.mock-hero span{display:block;height:8px;border-radius:5px;background:rgba(255,255,255,.65);margin-bottom:6px}
+.mock-hero span.short{width:55%}
+.mock-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:10px}
+.mock-row i{height:34px;border-radius:8px;background:rgba(255,255,255,.9)}
+.mock-badge{position:absolute;top:10px;right:10px;background:var(--accent);color:#221a00;font-weight:900;font-size:.7rem;padding:6px 10px;border-radius:100px;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+.design-box .btn{margin-top:2px}
 .micro{font-size:.8rem!important;color:#8fa3bf!important}
 .founder-mini{display:flex;gap:10px;background:#101f3a;border:1px solid #26395c;border-radius:12px;padding:10px;margin-top:12px}
 .favatar{width:40px;height:40px;border-radius:50%;background:var(--teal);display:grid;place-items:center;font-weight:900;color:#fff}
@@ -181,7 +195,7 @@ h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;margin:.4rem 0 .8rem}
 .hero-copy .sub{animation:fadeUp .7s .1s ease both}
 .reasons .reason{animation:fadeUp .6s ease both}
 .reasons .reason:nth-child(2){animation-delay:.12s}.reasons .reason:nth-child(3){animation-delay:.22s}
-.audit-box{animation:pop .6s .15s ease both}
+.design-box{animation:pop .6s .15s ease both}
 .btn-primary,.btn-accent{transition:transform .15s ease,box-shadow .15s ease,filter .15s}
 .btn-primary:hover,.btn-accent:hover{transform:translateY(-2px)}
 .btn-accent{animation:pulseGlow 2.6s infinite}
@@ -238,7 +252,7 @@ body.lock{overflow:hidden}
 .foot-grid{grid-template-columns:1fr;text-align:center}
 .hero{padding:24px 0 16px}
 .hero-ctas .btn{flex:1 1 100%;text-align:center}
-.audit-box{padding:18px}
+.design-box{padding:18px}
 .logo-belt{padding:8px 16px}.belt-label{display:none}
 .filters{overflow-x:auto;padding-bottom:8px;-webkit-overflow-scrolling:touch}
 .chip{flex-shrink:0}
@@ -297,7 +311,7 @@ h2{font-size:1.4rem}
 .logo-text{font-size:.9rem}
 .about-photo{min-height:220px;font-size:2.5rem}
 .book-form{padding:18px}
-.book-form input,.audit-box input{padding:14px;font-size:16px}
+.book-form input{padding:14px;font-size:16px}
 .faq summary{font-size:.92rem}
 .badges span{font-size:.78rem}
 .sticky-cta{bottom:calc(10px + env(safe-area-inset-bottom));left:10px;right:10px}

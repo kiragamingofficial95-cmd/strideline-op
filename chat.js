@@ -96,8 +96,8 @@
   function start() {
     bot("👋 Hey! I'm the StrideLine assistant. We build websites exclusively for O&P clinics.");
     typing(function () {
-      bot('Want a free audit showing what\'s leaking evals on your current site?');
-      setQuick(['Yes — free audit', 'Pricing', 'Talk to Varad']);
+      bot('Want a free custom design showing what your clinic site could look like?');
+      setQuick(['Yes — free design', 'Pricing', 'Talk to Varad']);
     });
   }
 
@@ -109,7 +109,7 @@
     var low = v.toLowerCase();
 
     if (/price|cost|much/.test(low)) {
-      say('Fixed-price builds: most O&P sites $3.5k–$7.5k, no retainer. Covered by our 100% money-back guarantee. Want me to start your free audit to scope it?', ['Yes — free audit', 'Talk to Varad']);
+      say('Fixed-price builds: most O&P sites $3.5k–$7.5k, no retainer. Covered by our 100% money-back guarantee. Want me to start your free custom design?', ['Yes — free design', 'Talk to Varad']);
       return;
     }
     if (/human|call|varad|phone/.test(low)) {
@@ -120,7 +120,7 @@
 
     switch (session.step) {
       case 'start':
-        if (/audit|yes|sure|ok/i.test(v)) { session.step = 'name'; say('Great — what\'s your full name?'); }
+        if (/design|audit|yes|sure|ok/i.test(v)) { session.step = 'name'; say('Great — what\'s your full name?'); }
         else { session.step = 'name'; say('No problem! To help anyway — what\'s your full name?'); }
         break;
       case 'name':
@@ -133,11 +133,11 @@
         break;
       case 'need':
         session.lead.need = v; session.step = 'phone';
-        say('Last one — your cell + website URL (e.g. "7345550100, limbwise.com") so we can send the Loom audit in 24h.');
+        say('Last one — your cell + website URL (e.g. "7345550100, limbwise.com") so we can send the free design in 48h.');
         break;
       case 'phone':
         session.lead.contact = v; session.step = 'done'; save();
-        say('✅ Locked in, ' + (session.lead.name || 'there').split(' ')[0] + '! Your free audit is queued — check SMS/email in 24h.', []);
+        say('✅ Locked in, ' + (session.lead.name || 'there').split(' ')[0] + '! Your free custom design is queued — check SMS/email in 48h.', []);
         setTimeout(function () { location.href = 'thank-you.html'; }, 2200);
         break;
       case 'phone_direct':
@@ -145,7 +145,7 @@
         say('✅ Got it — Varad will text you today. (Saved ✓)', []);
         break;
       default:
-        say('Happy to help! Want the free audit, pricing, or to talk to Varad?', ['Yes — free audit', 'Pricing', 'Talk to Varad']);
+        say('Happy to help! Want the free design, pricing, or to talk to Varad?', ['Yes — free design', 'Pricing', 'Talk to Varad']);
         session.step = 'start';
     }
   }

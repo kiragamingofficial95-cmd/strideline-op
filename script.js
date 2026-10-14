@@ -76,8 +76,7 @@ function handleForm(id, msgId, okText) {
     form.querySelectorAll('input').forEach(i => i.value = '');
   });
 }
-handleForm('auditForm', 'formMsg', 'Received! Your Loom audit is queued — check email in 24h.');
-handleForm('bookForm', 'bookMsg', 'Booked! We sent your audit slot + calendar link via SMS/email.');
+handleForm('bookForm', 'bookMsg', 'Locked in! Your free custom design is queued — check SMS/email in 48h.');
 
 // ===== Frictionless modal popup + fast redirect =====
 const modal = document.getElementById('auditModal');
@@ -100,7 +99,7 @@ function closeModal() {
   modal.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('lock');
 }
-// Every "Book / Audit" CTA opens popup instead of jumping
+// Every "Book / Design" CTA opens popup instead of jumping
 document.querySelectorAll('a[href="#book"]').forEach(a => a.addEventListener('click', openModal));
 if (modalClose) modalClose.addEventListener('click', closeModal);
 if (modal) modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
