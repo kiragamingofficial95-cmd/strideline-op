@@ -64,7 +64,7 @@
     hideTeaser();
   });
   if (teaser) teaser.addEventListener('click', function () { open(); });
-  setTimeout(showTeaser, 3500);
+  showTeaser();
 
   function bubble(from, text) {
     var d = document.createElement('div');
