@@ -7,7 +7,13 @@ section{scroll-margin-top:80px}
 h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.12;letter-spacing:-.02em}
 h1{font-size:clamp(2rem,4.5vw,3.3rem);font-weight:800}
 h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;margin:.4rem 0 .8rem}
-.container{max-width:1160px;margin:0 auto;padding:0 20px}
+.container{max-width:1160px;margin:0 auto;padding:0 clamp(16px,3vw,20px)}
+/* Ultra-wide guard: 50% zoom (= huge CSS viewport) renders same capped composition */
+@media(min-width:1600px){
+.container,.hero-grid,.logo-belt{max-width:1160px}
+.hero-copy h1{font-size:3.3rem}
+.hero-grid{gap:36px}
+}
 .narrow{max-width:800px}
 .section{padding:72px 0}
 .tint{background:var(--bg)}
@@ -38,9 +44,12 @@ h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;margin:.4rem 0 .8rem}
 .btn-sm{padding:10px 16px;font-size:.9rem}.btn-lg{padding:15px 24px;font-size:1.02rem}
 .btn-block{width:100%;text-align:center}
 
-/* hero */
-.hero{background:linear-gradient(180deg,#eef6f6,#fff 60%);padding:36px 0 20px;border-bottom:1px solid var(--line)}
-.hero-grid{display:grid;grid-template-columns:1.2fr .9fr;gap:32px;align-items:start}
+/* hero — zoom-stable: capped shell + fluid clamp, identical at 100% and 50% zoom */
+.hero{background:linear-gradient(180deg,#eef6f6,#fff 60%);padding:clamp(24px,4vh,48px) 0 clamp(14px,2vh,22px);border-bottom:1px solid var(--line);overflow:clip;isolation:isolate}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(20px,3vw,36px);align-items:center;max-width:1160px;margin:0 auto}
+.hero-copy{min-width:0;max-width:640px}
+.hero-copy h1{font-size:clamp(2rem,2.5rem + 1vw,3.3rem);text-wrap:balance}
+.hero-card{min-width:0;width:100%;max-width:400px;justify-self:end}
 .pill{display:inline-block;background:#0a1a33;color:#7fe3df;font-weight:800;font-size:.75rem;padding:8px 14px;border-radius:100px;margin-bottom:14px}
 .hl{background:linear-gradient(transparent 55%,#bff3f1 55%)}
 .sub{color:#3d4f6a;margin:14px 0;font-size:1.06rem}
