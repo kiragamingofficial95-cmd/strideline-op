@@ -162,6 +162,44 @@ h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;margin:.4rem 0 .8rem}
 /* badges + guarantee */
 .badges{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:18px 0}
 .badges span{border:1px solid var(--line);background:#fff;padding:8px 14px;border-radius:100px;font-weight:700;font-size:.85rem}
+/* Intrepy-style award tiles */
+.badges-tiles span{display:flex;flex-direction:column;gap:2px;border-radius:14px;padding:12px 18px;min-width:130px}
+.badges-tiles b{font-size:.95rem}.badges-tiles small{font-weight:600;color:var(--mut);font-size:.72rem}
+/* platform rating tiles (Intrepy badge row) */
+.plat-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0 4px}
+.ptile{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.ptile img{width:26px;height:26px;object-fit:contain;border-radius:6px}
+.ptile b{display:block;font-size:.92rem}.ptile span{font-size:.74rem;color:var(--mut)}
+.rev-metric{font-size:.8rem;color:var(--teal-d);background:#e6f7f6;border-radius:8px;padding:6px 10px;margin:8px 0 0}.rev-metric b{font-weight:900}
+/* pain authority extras */
+.pain{position:relative}
+.pain-no{position:absolute;top:12px;right:14px;font-family:Sora,Inter,sans-serif;font-weight:800;font-size:.8rem;color:#c6d2e3}
+.pain-cost{font-size:.8rem;font-weight:700;color:#b45309;background:#fef3c7;border-radius:8px;padding:6px 10px}
+.auth-strip{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:18px 0 4px}
+.auth-strip span{background:var(--navy);color:#dbe7f7;border-radius:100px;padding:8px 16px;font-size:.82rem}
+.auth-strip b{color:var(--accent)}
+/* personality extras */
+.about-quote{font-size:1.05rem;font-weight:700;color:var(--navy);border-left:4px solid var(--accent);padding-left:12px;margin:10px 0}
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+.about-stats div{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px;text-align:center}
+.about-stats b{display:block;font-size:1.25rem;color:var(--navy)}.about-stats span{font-size:.76rem;color:var(--mut)}
+.photo-plate{position:absolute;bottom:44px;left:14px;right:14px;background:rgba(7,18,36,.75);color:#fff;border-radius:10px;padding:8px 12px;text-align:center}
+.photo-plate strong{display:block;font-size:.9rem}.photo-plate span{font-size:.72rem;color:#9fb0c9}
+/* case-study metric headers (Intrepy pattern) */
+.ba-metric{display:flex;align-items:baseline;gap:8px;margin-bottom:6px}
+.ba-metric b{font-size:1.7rem;font-weight:900;color:var(--navy);letter-spacing:-.02em}
+.ba-metric span{font-size:.78rem;color:var(--mut)}
+.verified{display:inline-block;font-size:.7rem;font-weight:800;color:var(--teal-d);background:#e6f7f6;border-radius:20px;padding:3px 10px;margin-top:8px}
+/* faq nudge */
+.faq-nudge{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-top:14px;flex-wrap:wrap}
+.faq-nudge strong{display:block}.faq-nudge span{font-size:.86rem;color:var(--mut)}
+/* final + header */
+.final-proof{display:flex;align-items:center;gap:10px;margin:12px 0;font-size:.86rem;color:#dbe7f7}
+.final-proof b{color:#fff}
+.btn-ghost-light{display:inline-block;border:2px solid rgba(255,255,255,.7);color:#fff;border-radius:12px;padding:12px 20px;font-weight:800;text-decoration:none;margin-top:10px}
+.btn-ghost-light:hover{background:rgba(255,255,255,.12)}
+.head-phone{font-weight:800;font-size:.88rem;color:var(--navy);text-decoration:none;white-space:nowrap}
+.head-phone:hover{color:var(--teal-d)}
 .center .lede{margin-left:auto;margin-right:auto}
 .guarantee{background:#fff;border:2px dashed var(--teal);border-radius:16px;padding:24px;max-width:720px;margin:24px auto 0;color:var(--ink);text-align:left}
 .g-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:8px}
@@ -255,6 +293,10 @@ body.lock{overflow:hidden}
 .foot-grid{grid-template-columns:1fr;text-align:center}
 .hero{padding:24px 0 16px}
 .hero-ctas .btn{flex:1 1 100%;text-align:center}
+.head-phone{display:none}
+.plat-tiles{grid-template-columns:1fr}
+.auth-strip span{font-size:.76rem}
+.faq-nudge{flex-direction:column;text-align:center}
 .logo-belt{padding:8px 16px}.belt-label{display:none}
 .filters{overflow-x:auto;padding-bottom:8px;-webkit-overflow-scrolling:touch}
 .chip{flex-shrink:0}
