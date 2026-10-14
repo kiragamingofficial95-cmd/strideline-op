@@ -71,14 +71,29 @@ h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;margin:.4rem 0 .8rem}
 .favatar{width:30px;height:30px;border-radius:50%;background:var(--teal);display:inline-grid;place-items:center;font-weight:900;font-size:.72rem;color:#fff;flex-shrink:0}
 /* portfolio feature: 3 slim proof cards */
 .hero-sites{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:clamp(8px,1.4vh,14px) 0 4px;text-align:left}
-.hsite{background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 12px}
-.hsite-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
-.hsite-top b{font-size:.8rem}.hsite-top span{font-size:.68rem;font-weight:800;color:var(--teal-d);background:#e6f7f6;border-radius:20px;padding:3px 9px;white-space:nowrap}
-.hsite-bar{height:clamp(26px,4vh,44px);border-radius:8px;margin:8px 0}
+.hsite{background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px;box-shadow:0 8px 22px rgba(10,26,51,.08)}
+.hsite-url{display:flex;align-items:center;gap:4px;background:#eef2f7;border-radius:8px;padding:6px 8px}
+.hsite-url i{width:7px;height:7px;border-radius:50%;background:#c3cede}
+.hsite-url i:first-child{background:#f87171}.hsite-url i:nth-child(2){background:#fbbf24}.hsite-url i:nth-child(3){background:#34d399}
+.hsite-url span{font-size:.64rem;font-weight:700;color:#5b6b84;margin-left:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hsite-url em{margin-left:auto;font-style:normal;font-size:.62rem;font-weight:800;color:var(--teal-d);background:#e6f7f6;border-radius:20px;padding:2px 8px;white-space:nowrap}
+.hsite-bar{border-radius:8px;margin:8px 0;padding:10px;min-height:64px;display:flex;flex-direction:column;justify-content:center;gap:6px}
 .hsite-bar.h1{background:linear-gradient(135deg,#0a1a33,#0ea5a0)}
 .hsite-bar.h2{background:linear-gradient(135deg,#123a6d,#0ea5a0)}
 .hsite-bar.h3{background:linear-gradient(135deg,#5b2a86,#0ea5a0)}
-.hsite small{font-size:.72rem;color:var(--mut)}
+.hsite-bar b{color:#fff;font-size:.82rem;line-height:1.25}
+.hsite-bar span{align-self:flex-start;font-size:.62rem;font-weight:800;background:var(--accent);color:#221a00;border-radius:20px;padding:4px 10px}
+.hsite small{display:block;font-size:.72rem;color:var(--mut);padding:0 4px 2px}.hsite small b{color:var(--ink)}
+.stars img{width:15px;height:15px;object-fit:contain;vertical-align:-2px;border-radius:3px}
+.shot{position:relative}
+.shot-bar{display:flex;align-items:center;gap:4px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);border-radius:8px;padding:5px 8px;margin-bottom:10px}
+.shot-bar i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.6)}
+.shot-bar span{font-size:.64rem;font-weight:700;color:#fff;margin-left:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.shot-eyebrow{font-size:.68rem!important}
+.shot-tag{position:absolute;top:10px;right:10px;background:var(--accent);color:#221a00;font-weight:900;font-size:.68rem;padding:5px 10px;border-radius:100px;box-shadow:0 6px 16px rgba(0,0,0,.25);white-space:nowrap;opacity:1}
+.tmetric{display:flex;align-items:baseline;gap:8px;margin-bottom:8px}
+.tmetric b{font-size:1.6rem;font-weight:900;color:var(--navy);letter-spacing:-.02em}
+.tmetric span{font-size:.78rem;color:var(--mut)}
 /* Rotating logo belt */
 .logo-belt{display:flex;align-items:center;gap:14px;max-width:1160px;margin:clamp(4px,.8vh,8px) auto 0;padding:6px 20px;overflow:hidden}
 .belt-label{font-size:.72rem;font-weight:800;letter-spacing:.08em;color:var(--mut);white-space:nowrap}
