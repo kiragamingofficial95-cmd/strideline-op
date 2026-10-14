@@ -237,9 +237,18 @@ body{padding-bottom:64px}
 }
 
 /* ===== Chatbot widget ===== */
-#chatFab{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;border:0;background:var(--navy);color:#fff;font-size:1.5rem;cursor:pointer;z-index:90;box-shadow:0 12px 30px rgba(10,26,51,.35);transition:transform .15s}
+#chatFab{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;border:0;background:#1f6bff;color:#fff;display:grid;place-items:center;cursor:pointer;z-index:90;box-shadow:0 12px 30px rgba(31,107,255,.45);transition:transform .15s}
 #chatFab:hover{transform:scale(1.06)}
+#chatFab svg{pointer-events:none}
 #chatDot{position:absolute;top:2px;right:2px;background:#e11d48;color:#fff;font-size:.7rem;font-weight:900;width:20px;height:20px;border-radius:50%;display:grid;place-items:center}
+/* Proactive teaser bubble */
+#chatTeaser{position:fixed;right:90px;bottom:28px;max-width:280px;background:#fff;border-radius:14px;box-shadow:0 16px 40px rgba(10,26,51,.25);display:flex;align-items:center;gap:10px;padding:10px 36px 10px 10px;z-index:89;cursor:pointer;opacity:0;transform:translateY(10px) scale(.96);pointer-events:none;transition:opacity .3s ease,transform .3s ease;border:1px solid var(--line)}
+#chatTeaser.show{opacity:1;transform:none;pointer-events:auto;animation:pop .3s ease both}
+#chatTeaser::after{content:"";position:absolute;right:-8px;bottom:18px;width:16px;height:16px;background:#fff;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transform:rotate(-45deg);border-bottom-right-radius:4px}
+#chatTeaser span{font-size:.92rem;font-weight:600;color:#13233f;line-height:1.35}
+.chat-teaser-avatar{width:44px;height:44px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:900;font-size:.85rem;flex-shrink:0;overflow:hidden}
+#chatTeaserX{position:absolute;top:6px;right:8px;border:0;background:none;color:#5b6b84;font-size:.85rem;cursor:pointer;padding:4px;line-height:1}
+#chatTeaserX:hover{color:#13233f}
 #chatBox{position:fixed;right:20px;bottom:88px;width:360px;max-width:calc(100vw - 32px);height:480px;max-height:70vh;background:#fff;border-radius:18px;box-shadow:0 30px 70px rgba(0,0,0,.3);display:none;flex-direction:column;overflow:hidden;z-index:95;border:1px solid var(--line)}
 #chatBox.open{display:flex;animation:pop .25s ease both}
 #chatHead{background:var(--navy);color:#fff;padding:12px 14px;display:flex;justify-content:space-between;align-items:center}
@@ -258,6 +267,7 @@ body{padding-bottom:64px}
 @media(max-width:600px){
 #chatFab{bottom:76px;right:12px}
 #chatBox{right:12px;bottom:142px;height:440px}
+#chatTeaser{right:80px;bottom:84px;max-width:230px}
 }
 @media(max-width:600px){
 .container{padding:0 16px}

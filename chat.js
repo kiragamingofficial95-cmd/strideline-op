@@ -21,7 +21,8 @@
   var root = document.createElement('div');
   root.id = 'chatRoot';
   root.innerHTML =
-    '<button id="chatFab" aria-label="Chat with us">💬<span id="chatDot">1</span></button>' +
+    '<div id="chatTeaser" aria-hidden="true"><div class="chat-teaser-avatar">VA</div><span>Hey - I\'m online. Do you have any questions?</span><button id="chatTeaserX" aria-label="Dismiss">✕</button></div>' +
+    '<button id="chatFab" aria-label="Chat with us"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg><span id="chatDot">1</span></button>' +
     '<div id="chatBox" aria-hidden="true">' +
       '<div id="chatHead"><div><strong>StrideLine Assistant</strong><span>● Online — replies instantly</span></div>' +
       '<button id="chatClose" aria-label="Close chat">✕</button></div>' +
@@ -40,10 +41,30 @@
       quick = document.getElementById('chatQuick'),
       dot = document.getElementById('chatDot');
 
-  function open() { box.classList.add('open'); box.setAttribute('aria-hidden', 'false'); dot.style.display = 'none'; setTimeout(function(){ input.focus(); }, 100); }
+  function open() { box.classList.add('open'); box.setAttribute('aria-hidden', 'false'); dot.style.display = 'none'; hideTeaser(); setTimeout(function(){ input.focus(); }, 100); }
   function close() { box.classList.remove('open'); box.setAttribute('aria-hidden', 'true'); }
   fab.addEventListener('click', function () { box.classList.contains('open') ? close() : open(); });
   document.getElementById('chatClose').addEventListener('click', close);
+
+  // Proactive teaser bubble like screenshot — shows once, hides on open/dismiss
+  var teaser = document.getElementById('chatTeaser');
+  var teaserX = document.getElementById('chatTeaserX');
+  var teaserDone = false;
+  try { teaserDone = sessionStorage.getItem('chat_teaser_done') === '1'; } catch (e) {}
+  function hideTeaser() { if (teaser) { teaser.classList.remove('show'); teaser.setAttribute('aria-hidden', 'true'); } }
+  function showTeaser() {
+    if (teaserDone || !teaser || box.classList.contains('open')) return;
+    teaser.classList.add('show');
+    teaser.setAttribute('aria-hidden', 'false');
+  }
+  if (teaserX) teaserX.addEventListener('click', function (e) {
+    e.stopPropagation();
+    teaserDone = true;
+    try { sessionStorage.setItem('chat_teaser_done', '1'); } catch (err) {}
+    hideTeaser();
+  });
+  if (teaser) teaser.addEventListener('click', function () { open(); });
+  setTimeout(showTeaser, 3500);
 
   function bubble(from, text) {
     var d = document.createElement('div');
